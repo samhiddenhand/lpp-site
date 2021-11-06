@@ -77,30 +77,6 @@ const AboutPage = (props) => {
         left: 0;
         opacity: 0.5
       }
-      :global(.main-wrapper) {
-        float: left;
-        height: calc(100vh - var(--lpp-header-height));
-        width: 100vw;
-        margin-top: var(--lpp-header-height);
-        overflow: hidden;
-        transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
-        /* z-index: 9999; */
-        position: absolute;
-      }
-      :global(main) {
-        float: left;
-        height: calc(calc(100vh - var(--lpp-header-height)) + 10vw);
-        width: 110vw;
-        overflow-y: auto;
-        padding: var(--grid-gap-unit);
-        margin-top: -5vw;
-        margin-left: -5vw;
-        padding-top: 2vw;
-        line-height: 1.5rem;
-        border: 5vw solid var(--lpp-white);
-        border-radius: 7vw;
-        transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
-      }
 
       :global(.product-categories) {
         display: grid;

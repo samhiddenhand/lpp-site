@@ -87,11 +87,14 @@ const Header = ({page}) => (
     </svg>
     </div>
     <Nav />
-    <select id="language-selector" onChange={updateLanguage} onLoad={selectLanguage}>
+    {/* <select id="language-selector" onChange={updateLanguage} onLoad={selectLanguage}>
       <option disabled selected value>Language:</option>
       <option value="en_US" className="flag-icon-background flag-icon-en">English</option>
       <option value="fr" className="flag-icon-background flag-icon-fr">Français</option>
-    </select>
+    </select> */}
+    <div id="language-selector">
+      <span className="flag-icon-background flag-icon-usa"></span>
+    </div>
     <div id="site-border"></div>
 
     <style jsx>{`
@@ -110,6 +113,17 @@ const Header = ({page}) => (
       font-size: calc(var(--lpp-header-height) / 2);
       line-height: calc(var(--lpp-header-height) / 2);
       overflow: visible;
+
+      span {
+        display: block;
+        margin-top: calc(var(--lpp-header-height) * 0.25);
+        height: calc(var(--lpp-header-height) * 0.5);
+        width: 3vw;
+      }
+    }
+
+    .flag-icon-background, .flag-icon {
+      background-position: 0;
     }
 
     header {

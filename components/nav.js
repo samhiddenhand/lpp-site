@@ -90,6 +90,35 @@ const Nav = () => (
         margin-bottom: 1em;
       }
 
+      :global(.main-wrapper) {
+        float: left;
+        height: calc(100vh - var(--lpp-header-height));
+        width: 100vw;
+        margin-top: var(--lpp-header-height);
+        overflow: hidden;
+        transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
+        /* z-index: 9998; */
+        position: absolute;
+      }
+
+      
+      :global(main) {
+        float: left;
+        height: calc(calc(100vh - var(--lpp-header-height)) + 9vw);
+        width: 108vw;
+        overflow-y: auto;
+        padding: var(--grid-gap-unit);
+        margin-top: -5vw;
+        margin-left: -4vw;
+        padding-top: 2vw;
+        line-height: 1.5rem;
+        border: 5vw solid var(--lpp-white);
+        /* border-top: 5vw solid transparent; */
+        /* border-radius: 7vw; */
+        
+        transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
       @media(max-width: 854px) {
         :global(body) {
           --lpp-logo-height: calc(100vw / 8);
@@ -338,7 +367,7 @@ const Nav = () => (
           width: 75vw;
 
           main {
-            width: 85vw;
+            width: 83vw;
           }
         }
       }

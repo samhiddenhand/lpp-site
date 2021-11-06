@@ -32,6 +32,7 @@ const Head = props => (
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <script async src="https://kit.fontawesome.com/ed75cadada.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/flag-icon.css" />
   </NextHead>
 )
 

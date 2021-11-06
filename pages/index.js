@@ -122,34 +122,7 @@ const Home = (props) => {
         /* backdrop-filter: blur(10px); */
         opacity: 0.5
       }
-      :global(.main-wrapper) {
-        float: left;
-        height: calc(100vh - var(--lpp-header-height));
-        width: 100vw;
-        margin-top: var(--lpp-header-height);
-        overflow: hidden;
-        transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
-        /* z-index: 9998; */
-        position: absolute;
-      }
-
       
-      :global(main) {
-        float: left;
-        height: calc(calc(100vh - var(--lpp-header-height)) + 10vw);
-        width: 110vw;
-        overflow-y: auto;
-        padding: var(--grid-gap-unit);
-        margin-top: -5vw;
-        margin-left: -5vw;
-        padding-top: 2vw;
-        line-height: 1.5rem;
-        border: 5vw solid var(--lpp-white);
-        /* border-top: 5vw solid transparent; */
-        /* border-radius: 7vw; */
-        
-        transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
-      }
 
       :global(body.nav-open) {
         @media(min-width: 854px) {
@@ -157,7 +130,7 @@ const Home = (props) => {
                   width: 75vw;
                   
                   main {
-                    width: 85vw;
+                    width: 83vw;
                   }
                 } 
 }
@@ -222,27 +195,20 @@ const Home = (props) => {
           width: calc(50% - calc(var(--grid-gap-unit) * 4);
           height: 50vh;
           float: left;
-          /* margin-right: calc(var(--grid-gap-unit) * 2); */
           background-image: url('/featured-product.png');
           background-size: 33%;
-          background-position: top center;
+          background-position: center 80%;
           background-repeat: no-repeat;
           padding-bottom: 6vh;
-          /* border-top-right-radius: 0;
-          border-top-left-radius: 0;
-          border-bottom-right-radius: 0; */
-          /* padding: 0;
-          box-shadow: none;
-          backdrop-filter: none;
-          background-color: transparent; */
           margin-bottom: 0;
           cursor: pointer;
 
           h2 {
             width: 100%;
             position: absolute;
-            bottom: 0;
+            top: 1em;
             text-align: center;
+            text-transform: uppercase;
           }
         }
         &.featured-product:last-child {
@@ -264,6 +230,11 @@ const Home = (props) => {
           backdrop-filter: none;
           background-color: transparent; */
           padding-bottom: 0;
+
+          h2 {
+            text-align: center;
+            text-transform: uppercase;
+          }
 
           p {
             max-width: 30em;
